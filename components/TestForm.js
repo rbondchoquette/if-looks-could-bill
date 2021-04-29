@@ -43,7 +43,7 @@ const TestForm = ({ }) => {
                     <label htmlFor='first_name'>first name</label><br />
                     <Field name='first_name' type='text'></Field><br />
                     <div><ErrorMessage name='first_name'/></div>
-                    <button type='submit'>+</button>
+                    <button type='submit'>search</button>
                 </Form>
             </Formik>
             <TestChild last_name={last_name} first_name={first_name}/>
