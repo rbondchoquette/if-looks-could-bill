@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import axios from 'axios';
+import Link from 'next/link';
 
 const TestChild = ({last_name, first_name}) => {
 
@@ -22,11 +22,11 @@ const TestChild = ({last_name, first_name}) => {
             {<ul>
               {results.map((result) => (
                 <li>
-                  
+                  <Link href={`/${encodeURIComponent(result.number)}`}>
                     <div>
                       <p>{result.basic.last_name}, {result.basic.first_name}: {result.number}</p>
                     </div>
-
+                    </Link>
                 </li>
               ))}
               </ul>}
