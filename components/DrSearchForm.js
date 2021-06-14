@@ -1,9 +1,11 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import TestChild from '../components/TestChild'
+import DrSearchResults from './DrSearchResults'
 import { useState } from 'react'
+import styles from '../styles/Home.module.css'
 
-const TestForm = ({ }) => {
+
+const DrSearchForm = ({ }) => {
 
     const [last_name, setLast_Name] = useState('');
     const [first_name, setFirst_Name] = useState('');
@@ -38,17 +40,17 @@ const TestForm = ({ }) => {
             >
                 <Form>
                     <label htmlFor='last_name'>last name</label><br />
-                    <Field name='last_name' type='text'></Field><br />
-                    <div><ErrorMessage name='last_name' /></div>
+                    <Field name='last_name' type='text' className={styles.input}></Field><br />
+                    <div className={styles.errorMessage}><ErrorMessage name='last_name' /></div><br />
                     <label htmlFor='first_name'>first name</label><br />
-                    <Field name='first_name' type='text'></Field><br />
-                    <div><ErrorMessage name='first_name'/></div>
-                    <button type='submit'>search</button>
+                    <Field name='first_name' type='text' className={styles.input}></Field><br />
+                    <div className={styles.errorMessage}><ErrorMessage name='first_name'/></div>
+                    <button type='submit' className={styles.button}>search</button>
                 </Form>
             </Formik>
-            <TestChild last_name={last_name} first_name={first_name}/>
+            <DrSearchResults last_name={last_name} first_name={first_name}/>
         </div> 
     );
 }
 
-export default TestForm
+export default DrSearchForm
