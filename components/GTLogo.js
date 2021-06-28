@@ -1,6 +1,6 @@
 import styles from '../styles/Layout.module.css'
 
-const url = 'http://localhost:3000/'
+const url = '/'
 
 //const url = 'http://if-looks-could-bill.vercel.app'
 

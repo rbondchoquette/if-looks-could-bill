@@ -9,7 +9,7 @@ export default function Home({}) {
     <div className="container">
 
       <main>
-        <h1 className={styles.title}>GT <span className={styles.titleEmphasis}>lab coat</span> {/*<img src='/Untitled-2.png' className={styles.lbLogo}/> */}</h1>
+        <h1 className={styles.title}>GT <span className={styles.titleEmphasis}>lab coat</span> {<img src='/Untitled-2.png' className={styles.lbLogo}/> }</h1>
         <div className={styles.container}>
           <div className={styles.searchDoctors}>
             <h2>search doctors <br /> &darr;</h2>
